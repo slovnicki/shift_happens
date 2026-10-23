@@ -1,0 +1,45 @@
+/* ==========================================================================
+   theme.css — design tokens extracted from sciply.com
+   Source: https://sciply.com/_astro/BaseLayout.*.css (:root block), Oct 2026.
+   SciPly is dark-only (color-scheme: dark), so the deck is too.
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700&family=Oxanium:wght@300;400;500;600;700&display=swap");
+
+:root {
+  color-scheme: dark;
+
+  /* --- Colors (exact values from sciply.com) --- */
+  --color-primary: #23a254;     /* SciPly green: links, eyebrows, logo, accents */
+  --color-secondary: #bfacb5;   /* mauve: pill tag text, secondary highlights */
+  --color-accent: #7f7b82;      /* muted grey-violet: meta text, light-weight words */
+  --color-text: #e5d0cc;        /* warm off-white body text */
+  --color-muted: #a39ea6;       /* lead paragraphs, summaries */
+  --color-bg: #222;             /* page background */
+  --color-surface: #2a2a2a;     /* cards */
+  --color-surface-2: #323232;   /* raised surfaces, covers, avatars */
+  --color-border: #3a3a3a;      /* 1px hairlines */
+
+  /* Derived tints (SciPly uses color-mix the same way for hovers/covers) */
+  --color-primary-soft: color-mix(in srgb, var(--color-primary) 14%, transparent);
+  --color-primary-line: color-mix(in srgb, var(--color-primary) 55%, var(--color-border));
+  --color-primary-dash: color-mix(in srgb, var(--color-primary) 50%, transparent);
+
+  /* --- Typography --- */
+  --font-display: "Oxanium", system-ui, sans-serif;   /* h1–h3, eyebrows, buttons, wordmark */
+  --font-body: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace; /* not on sciply.com; added for code */
+
+  --weight-light: 300;          /* wordmark, "We … to your ideas" slogan words */
+  --weight-display: 500;        /* SciPly headings are 500, never bold */
+  --leading-tight: 1.05;        /* hero slogan */
+  --leading-heading: 1.15;      /* h1–h3 */
+  --leading-body: 1.6;
+  --tracking-eyebrow: 0.18em;   /* uppercase eyebrow labels */
+
+  /* --- Shape & spacing (sciply radius is 14px at web scale; the stage is ~1.8x) --- */
+  --radius: 14px;
+  --radius-stage: 26px;
+  --radius-pill: 999px;
+  --easing: cubic-bezier(0.65, 0, 0.35, 1);  /* SciPly hero easing */
+}

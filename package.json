@@ -1,0 +1,11 @@
+{
+  "name": "shift-happens",
+  "private": true,
+  "description": "Shift Happens: When code becomes cheap. Hackathon talk slides.",
+  "scripts": {
+    "dev": "live-server --port=5500 --host=127.0.0.1 --no-browser --wait=150"
+  },
+  "devDependencies": {
+    "live-server": "1.2.2"
+  }
+}
